@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Payment</title>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="dashboard.html">Home</a>
+        <a href="">Charges for Services</a>
+        <a href="feedback.html">Feedback</a>
+        <div class="dropdown navbar-right" style="float:right;">
+            <button class="dropbtn">Language</button>
+            <div class="dropdown-content">
+                <a href="#">English</a>
+                <a href="#">Hindi</a>
+            </div>
+        </div>
+    </div>
+
+<div class="container">
+    <div class="content">
+        <h2>Bill Payment</h2>
+        <form action="/process-payment" method="post">
+            <label for="registration-number">Registration Number:</label>
+            <input type="text" id="registration-number" name="registration-number" required><br>
+
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" name="amount" required><br>
+
+            <label for="billing-cycle">Billing Cycle:</label>
+            <select id="billing-cycle" name="billing-cycle" required>
+                <option value="monthly">Monthly</option>
+                <option value="quarterly">Quarterly</option>
+                <option value="half-yearly">Half Yearly</option>
+                <option value="yearly">Yearly</option>
+            </select><br>
+
+            <label>Payment Option:</label><br>
+            <div class="payment-options">
+                <input type="radio" id="netbanking" name="payment-option" value="netbanking" required>
+                <label for="netbanking">Net Banking</label><br>
+
+                <input type="radio" id="debit-card" name="payment-option" value="debit-card">
+                <label for="debit-card">Debit Card or Credit Card</label><br>
+
+                <input type="radio" id="upi" name="payment-option" value="upi">
+                <label for="upi">Other UPI Apps</label><br>
+            </div>
+
+            <button type="submit">Proceed to Pay</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

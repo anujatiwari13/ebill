@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Connection</title>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="dashboard.html">Home</a>
+    <a href="#">Charges for Services</a>
+    <a href="feedback.html">Feedback</a>
+    <div class="dropdown navbar-right" style="float:right;">
+        <button class="dropbtn">Language</button>
+        <div class="dropdown-content">
+            <a href="#">English</a>
+            <a href="#">Hindi</a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="content">
+        <h2>New Connection</h2>
+        <form action="/apply-connection" method="post">
+            <label for="meter-type">Type of Connection:</label>
+            <select id="meter-type" name="meter-type">
+                <option value="commercial">Commercial</option>
+                <option value="residential">Residential</option>
+                <option value="Industrial">Industrial</option>
+                <option value="Institutional">Institutional</option>
+                <option value="Temporary">Temporary</option>
+            </select><br>
+
+            <label for="load">Load (in KW):</label>
+            <input type="number" id="load" name="load" required><br>
+
+            <label for="id-proof">Choose ID Proof:</label>
+            <select id="id-proof" name="id-proof">
+                <option value="Voter ID">Voter’s Identification Card</option>
+                <option value="Govt ID">Collector/Govt. Authorized Photo ID</option>
+                <option value="Aadhar">Aadhar Card</option>
+                <option value="PAN">PAN Card</option>
+                <option value="Driving License">Driving License</option>
+                <option value="Passport">Passport</option>
+            </select><br>
+
+            <label for="documents">Upload Document (<i>Accepted formats:pdf/jpeg</i>):</label> 
+            <input type="file" id="documents" name="documents" accept=".pdf,.jpeg,.jpg" multiple><br>
+
+            <button type="submit">Apply for Connection</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

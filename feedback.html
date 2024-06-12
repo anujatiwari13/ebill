@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback and Complaint</title>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="dashboard.html">Home</a>
+        <a href="">Charges for Services</a>
+        <a href="feedback.html">Feedback</a>
+        <div class="dropdown navbar-right" style="float:right;">
+            <button class="dropbtn">Language</button>
+            <div class="dropdown-content">
+                <a href="#">English</a>
+                <a href="#">Hindi</a>
+            </div>
+        </div>
+    </div>
+
+<div class="container">
+    <div class="content">
+        <h2>Feedback</h2>
+        <form action="/submit-feedback" method="post">
+            <div class="rating">
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1">1</label>
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2">2</label>
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3">3</label>
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4">4</label>
+                <input type="radio" id="star5" name="rating" value="5">
+                <label for="star5">5</label>
+            </div>
+            <textarea id="feedback" name="feedback" placeholder="Enter your feedback" required></textarea><br>
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+<hr>
+    <div class="content">
+        <h2>Complaint</h2>
+        <form action="/submit-complaint" method="post">
+            <input type="text" id="username" name="username" placeholder="Username" required><br>
+            <textarea id="complaint" name="complaint" placeholder="Enter your complaint" required></textarea><br>
+            <button type="submit">Raise Ticket</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
